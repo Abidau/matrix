@@ -12,7 +12,7 @@ public class InversMatrix {
 
         for (int i = 0; i < ordo; i++) {
             for (int j = 0; j < ordo; j++) {
-                matrix1[i][j] = sc.nextInt();
+                matrix1[i][j] = sc.nextDouble();
             }
         }
 
@@ -41,6 +41,12 @@ public class InversMatrix {
                 k = 0;
                 loop = 0;
             }
+
+            if (det == 0) {
+                System.out.println("Determinannya 0, tidak bisa melanjutkan");
+                return;
+            }
+
             // KOFAKTOR & TRANSPOS (ADJ)
             int isMinus = 1, c = 1, d = 2;
             for (i = 0; i < ordo; i++) {
@@ -67,6 +73,10 @@ public class InversMatrix {
         } else if (ordo == 2) {
             // DETERMINAN
             det = (matrix1[0][0] * matrix1[1][1]) - (matrix1[0][1] * matrix1[1][0]);
+            if (det == 0) {
+                System.out.println("Determinannya 0, tidak bisa melanjutkan");
+                return;
+            }
             // ADJ
             matrix2[0][0] = matrix1[1][1];
             matrix2[0][1] = matrix1[0][1] * -1;
