@@ -32,12 +32,14 @@ public class Nopal {
             kolom1 = sc.nextInt();
             System.out.println();
             
-            System.out.println("Masukkan matrix 2");
-            System.out.print("Masukkan baris : ");
-            baris2 = sc.nextInt();
-            System.out.print("Masukkan kolom : ");
-            kolom2 = sc.nextInt();
-            System.out.println();
+            if (opsi == 1 || opsi == 2 || opsi == 3) {
+                System.out.println("Masukkan matrix 2");
+                System.out.print("Masukkan baris : ");
+                baris2 = sc.nextInt();
+                System.out.print("Masukkan kolom : ");
+                kolom2 = sc.nextInt();
+                System.out.println();
+            }
 
             int[][] matrix1 = new int[baris1][kolom1];
             int[][] matrix2 = new int[baris2][kolom2];
@@ -256,72 +258,11 @@ public class Nopal {
     }
     
     static void Invers() {
-        
-        System.out.println("Masukkan matrix 1");
-        System.out.print("Masukkan baris : ");
-        int baris1 = sc.nextInt();
-        System.out.print("Masukkan kolom : ");
-        int kolom1 = sc.nextInt();
-        System.out.println();
-    
-        System.out.println("Masukkan matrix 2");
-        System.out.print("Masukkan baris : ");
-        int baris2 = sc.nextInt();
-        System.out.print("Masukkan kolom : ");
-        int kolom2 = sc.nextInt();
-        System.out.println();
-
-        int[][] matrix1 = new int[baris1][kolom1];
-        System.out.println("Masukkan angka matrix 1");
-        for (int i = 0; i < baris1; i++) {
-            for (int j = 0; j < kolom1; j++) {
-                System.out.print("matrix 1 ["+ i +"]["+ j +"] : ");
-                matrix1[i][j] = sc.nextInt();
-            }
-        }
-        System.out.println();
-    
-        int[][] matrix2 = new int[baris2][kolom2];
-        System.out.println("Masukkan angka matrix 2");
-        for (int i = 0; i < baris2; i++) {
-            for (int j = 0; j < kolom2; j++) {
-                System.out.print("matrix 2 [" + i + "][" + j + "] : ");
-                matrix2[i][j] = sc.nextInt();
-            }
-        } 
-        System.out.println();
-
-       //cara
-
-        System.out.println("Matrix 1 : ");
-        for (int i = 0; i < baris1; i++) {
-            for (int j = 0; j < kolom1; j++) {
-                System.out.print(matrix1[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.println("Matrix 2 : ");
-        for (int i = 0; i < baris2; i++) {
-            for (int j = 0; j < kolom2; j++) {
-                System.out.print(matrix2[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.println("Hasil Invers : ");
-        
+          
     }
     
     static void Transpose(int matrix1[][]) {
         
-        System.out.println("Masukkan matrix");
-        System.out.print("Masukkan baris : ");
-        int baris1 = sc.nextInt();
-        System.out.print("Masukkan kolom : ");
-        int kolom1 = sc.nextInt();
-        System.out.println();
-
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
             for (int j = 0; j < kolom1; j++) {
