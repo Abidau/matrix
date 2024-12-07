@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Nopal {
 
-    static int [][] hasil = null;
+    static double [][] hasil = null;
     static Scanner sc = new Scanner(System.in);
     static int baris1, kolom1, baris2, kolom2;
 
@@ -41,8 +41,8 @@ public class Nopal {
                 System.out.println();
             }
 
-            int[][] matrix1 = new int[baris1][kolom1];
-            int[][] matrix2 = new int[baris2][kolom2];
+            double[][] matrix1 = new double[baris1][kolom1];
+            double[][] matrix2 = new double[baris2][kolom2];
             
 
             if (opsi == 1) {
@@ -59,7 +59,7 @@ public class Nopal {
         }
     }
 
-    public static void Pertambahan(int matrix1[][], int matrix2[][]) {
+    public static void Pertambahan(double matrix1[][], double matrix2[][]) {
 
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
@@ -80,7 +80,7 @@ public class Nopal {
         System.out.println();
 
         if ((baris1 == baris2) && (kolom1 == kolom2)) {
-            hasil = new int[baris1][kolom1];
+            hasil = new double[baris1][kolom1];
             for (int i = 0; i < baris1; i++) {
                 for (int j = 0; j < kolom1; j++) {
                     hasil [i][j] = 0;
@@ -128,7 +128,7 @@ public class Nopal {
         System.out.println();
     }
     
-    static void Pengurangan(int matrix1[][], int matrix2[][]) {
+    static void Pengurangan(double matrix1[][], double matrix2[][]) {
 
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
@@ -149,7 +149,7 @@ public class Nopal {
         System.out.println();
 
         if ((baris1 == baris2) && (kolom1 == kolom2)) {
-            hasil = new int[baris1][kolom1];
+            hasil = new double[baris1][kolom1];
             for (int i = 0; i < baris1; i++) {
                 for (int j = 0; j < kolom1; j++) {
                     hasil [i][j] = 0;
@@ -197,7 +197,7 @@ public class Nopal {
         System.out.println();
     }
     
-    static void Perkalian(int matrix1[][], int matrix2[][]) {
+    static void Perkalian(double matrix1[][], double matrix2[][]) {
 
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
@@ -218,7 +218,7 @@ public class Nopal {
         System.out.println();
 
         if (kolom1 == baris2) {
-            hasil = new int[baris1][kolom2];
+            hasil = new double[baris1][kolom2];
             for (int i = 0; i < baris1; i++) {
                 for (int j = 0; j < kolom2; j++) {
                     hasil[i][j] = 0;
@@ -261,7 +261,7 @@ public class Nopal {
           
     }
     
-    static void Transpose(int matrix1[][]) {
+    static void Transpose(double matrix1[][]) {
         
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
@@ -301,3 +301,4 @@ public class Nopal {
         }
     }
 }
+
