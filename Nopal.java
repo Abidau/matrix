@@ -1,9 +1,10 @@
 import java.util.Scanner;
 public class Nopal {
 
-    static double [][] hasil = null;
+    // static double [][] hasil = null;
     static Scanner sc = new Scanner(System.in);
     static int baris1, kolom1, baris2, kolom2;
+    static double [][] hasil = new double[baris1][kolom1];
 
     public static void main(String[] args) {
             
@@ -80,7 +81,6 @@ public class Nopal {
         System.out.println();
 
         if ((baris1 == baris2) && (kolom1 == kolom2)) {
-            hasil = new double[baris1][kolom1];
             for (int i = 0; i < baris1; i++) {
                 for (int j = 0; j < kolom1; j++) {
                     hasil [i][j] = 0;
@@ -149,7 +149,6 @@ public class Nopal {
         System.out.println();
 
         if ((baris1 == baris2) && (kolom1 == kolom2)) {
-            hasil = new double[baris1][kolom1];
             for (int i = 0; i < baris1; i++) {
                 for (int j = 0; j < kolom1; j++) {
                     hasil [i][j] = 0;
