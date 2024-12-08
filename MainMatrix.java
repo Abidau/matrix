@@ -195,7 +195,7 @@ public class MainMatrix {
                 System.out.println();
             }
             System.out.println();
-        } else if (baris1 == 2) {
+        } else {
             // DETERMINAN
             det = (matrix1[0][0] * matrix1[1][1]) - (matrix1[0][1] * matrix1[1][0]);
             if (det == 0) {
