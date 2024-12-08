@@ -67,7 +67,7 @@ public class MainMatrix {
     }
     
     static void Perkalian(double matrix1[][], double matrix2[][]){
-       
+   
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
             for (int j = 0; j < kolom1; j++) {
