@@ -60,6 +60,8 @@ public class MainMatrix {
 
     static void Pertambahan(double matrix1[][], double matrix2[][]) {
         
+        hasil = new double[baris1][kolom1];
+
         System.out.println("Masukkan angka matrix 1"); 
         for (int i = 0; i < baris1; i++) { 
             for (int j = 0; j < kolom1; j++) { 
@@ -78,8 +80,8 @@ public class MainMatrix {
         } 
         System.out.println();
 
-        if ((baris1 == baris2) && (kolom1 == kolom2)) { 
-            for (int i = 0; i < baris1; i++) { 
+        if ((baris1 == baris2) && (kolom1 == kolom2)) {
+            for (int i = 0; i < baris1; i++) {
                 for (int j = 0; j < kolom1; j++) {
                     hasil [i][j] = 0;
                     hasil[i][j] = matrix1[i][j] + matrix2[i][j];
@@ -128,6 +130,8 @@ public class MainMatrix {
     }
     
     static void Pengurangan(double matrix1[][], double matrix2[][]){
+        
+        hasil = new double[baris1][kolom1];
         
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
