@@ -59,11 +59,139 @@ public class MainMatrix {
     }
 
     static void Pertambahan(double matrix1[][], double matrix2[][]) {
-        System.out.println("tambah");
+        
+        System.out.println("Masukkan angka matrix 1");
+        for (int i = 0; i < baris1; i++) {
+            for (int j = 0; j < kolom1; j++) {
+                System.out.print("matrix 1 ["+ i +"]["+ j +"] : ");
+                matrix1[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println();
+    
+        System.out.println("Masukkan angka matrix 2");
+        for (int i = 0; i < baris2; i++) {
+            for (int j = 0; j < kolom2; j++) {
+                System.out.print("matrix 2 [" + i + "][" + j + "] : ");
+                matrix2[i][j] = sc.nextInt();
+            }
+        } 
+        System.out.println();
+
+        if ((baris1 == baris2) && (kolom1 == kolom2)) {
+            for (int i = 0; i < baris1; i++) {
+                for (int j = 0; j < kolom1; j++) {
+                    hasil [i][j] = 0;
+                    hasil[i][j] = matrix1[i][j] + matrix2[i][j];
+                }
+            }
+        } else {
+            System.out.println("Operasi tidak valid untuk ukuran matrix yang diberikan.");
+        }
+
+        System.out.println("Hasil pertambahan : ");
+        for (int i = 0; i < baris1; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < kolom1; j++) {
+                System.out.print(matrix1[i][j] + " ");
+            } if (baris1 == baris2 && kolom1 == kolom2) {
+                if (i ==  1) {
+                    System.out.print("| + ");
+                } else {
+                    System.out.print("|   ");
+                }
+                System.out.print("| ");
+                for (int j = 0; j < kolom2; j++) {
+                    System.out.print(matrix2[i][j] + " ");
+                } if (baris1 == baris2 && kolom1 == kolom2) {
+                    if (i ==  1) {
+                        System.out.print("| = ");
+                    } else {
+                        System.out.print("|   ");
+                    }
+                    System.out.print("| ");
+                    for (int j = 0; j < kolom1; j++) {
+                        System.out.print(hasil[i][j] + " ");
+                } if (baris1 == baris2 && kolom1 == kolom2) {
+                    if (i ==  1) {
+                        System.out.print("| ");
+                } else {
+                    System.out.print("| ");
+                }
+                  System.out.println();  
+                }      
+                }
+            }
+        }
+        System.out.println();
     }
     
     static void Pengurangan(double matrix1[][], double matrix2[][]){
-        System.out.println("kurang");
+        
+        System.out.println("Masukkan angka matrix 1");
+        for (int i = 0; i < baris1; i++) {
+            for (int j = 0; j < kolom1; j++) {
+                System.out.print("matrix 1 ["+ i +"]["+ j +"] : ");
+                matrix1[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println();
+    
+        System.out.println("Masukkan angka matrix 2");
+        for (int i = 0; i < baris2; i++) {
+            for (int j = 0; j < kolom2; j++) {
+                System.out.print("matrix 2 [" + i + "][" + j + "] : ");
+                matrix2[i][j] = sc.nextInt();
+            }
+        } 
+        System.out.println();
+
+        if ((baris1 == baris2) && (kolom1 == kolom2)) {
+            for (int i = 0; i < baris1; i++) {
+                for (int j = 0; j < kolom1; j++) {
+                    hasil [i][j] = 0;
+                    hasil[i][j] = matrix1[i][j] - matrix2[i][j];
+                }
+            }
+        } else {
+            System.out.println("Operasi tidak valid untuk ukuran matrix yang diberikan.");
+        }
+
+        System.out.println("Hasil Pengurangan : ");
+        for (int i = 0; i < baris1; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < kolom1; j++) {
+                System.out.print(matrix1[i][j] + " ");
+            } if (baris1 == baris2 && kolom1 == kolom2) {
+                if (i ==  1) {
+                    System.out.print("| - ");
+                } else {
+                    System.out.print("|   ");
+                }
+                System.out.print("| ");
+                for (int j = 0; j < kolom2; j++) {
+                    System.out.print(matrix2[i][j] + " ");
+                } if (baris1 == baris2 && kolom1 == kolom2) {
+                    if (i ==  1) {
+                        System.out.print("| = ");
+                    } else {
+                        System.out.print("|   ");
+                    }
+                    System.out.print("| ");
+                    for (int j = 0; j < kolom1; j++) {
+                        System.out.print(hasil[i][j] + " ");
+                } if (baris1 == baris2 && kolom1 == kolom2) {
+                    if (i ==  1) {
+                        System.out.print("| ");
+                } else {
+                    System.out.print("| ");
+                }
+                  System.out.println();  
+                }      
+                }
+            }
+        }
+        System.out.println();
     }
     
     static void Perkalian(double matrix1[][], double matrix2[][]){
