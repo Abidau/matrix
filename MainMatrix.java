@@ -60,26 +60,26 @@ public class MainMatrix {
 
     static void Pertambahan(double matrix1[][], double matrix2[][]) {
         
-        System.out.println("Masukkan angka matrix 1");
-        for (int i = 0; i < baris1; i++) {
-            for (int j = 0; j < kolom1; j++) {
-                System.out.print("matrix 1 ["+ i +"]["+ j +"] : ");
-                matrix1[i][j] = sc.nextInt();
+        System.out.println("Masukkan angka matrix 1"); 
+        for (int i = 0; i < baris1; i++) { 
+            for (int j = 0; j < kolom1; j++) { 
+                System.out.print("matrix 1 ["+ i +"]["+ j +"] : "); 
+                matrix1[i][j] = sc.nextInt(); //disimpan dalam matrix1[i][j]
             }
         }
         System.out.println();
     
-        System.out.println("Masukkan angka matrix 2");
-        for (int i = 0; i < baris2; i++) {
-            for (int j = 0; j < kolom2; j++) {
-                System.out.print("matrix 2 [" + i + "][" + j + "] : ");
-                matrix2[i][j] = sc.nextInt();
+        System.out.println("Masukkan angka matrix 2"); 
+        for (int i = 0; i < baris2; i++) { 
+            for (int j = 0; j < kolom2; j++) { 
+                System.out.print("matrix 2 [" + i + "][" + j + "] : "); 
+                matrix2[i][j] = sc.nextInt(); //disimpan dalam matrix2[i][j]
             }
         } 
         System.out.println();
 
-        if ((baris1 == baris2) && (kolom1 == kolom2)) {
-            for (int i = 0; i < baris1; i++) {
+        if ((baris1 == baris2) && (kolom1 == kolom2)) { 
+            for (int i = 0; i < baris1; i++) { 
                 for (int j = 0; j < kolom1; j++) {
                     hasil [i][j] = 0;
                     hasil[i][j] = matrix1[i][j] + matrix2[i][j];
@@ -87,6 +87,7 @@ public class MainMatrix {
             }
         } else {
             System.out.println("Operasi tidak valid untuk ukuran matrix yang diberikan.");
+            return;
         }
 
         System.out.println("Hasil pertambahan : ");
@@ -155,6 +156,7 @@ public class MainMatrix {
             }
         } else {
             System.out.println("Operasi tidak valid untuk ukuran matrix yang diberikan.");
+            return;
         }
 
         System.out.println("Hasil Pengurangan : ");
@@ -195,7 +197,7 @@ public class MainMatrix {
     }
     
     static void Perkalian(double matrix1[][], double matrix2[][]){
-   
+       
         System.out.println("Masukkan angka matrix 1");
         for (int i = 0; i < baris1; i++) {
             for (int j = 0; j < kolom1; j++) {
@@ -226,6 +228,7 @@ public class MainMatrix {
             }
         } else {
             System.out.println("Operasi tidak valid untuk ukuran matrix yang diberikan.");
+            return;
         }
 
         System.out.println("Matrix 1 : ");
@@ -255,22 +258,18 @@ public class MainMatrix {
     }
     
     static void Invers(double matrix1[][]){
-        if (!((baris1 == 2 && kolom1 == 2) || (baris1 == 3 && kolom1 == 3))) {
-            System.out.println("Input tidak valid.");
-            return;
-        }
-
         double[][] matrix2 = new double[baris1][baris1];
         double det = 0;
 
         for (int i = 0; i < baris1; i++) {
             for (int j = 0; j < baris1; j++) {
-                System.out.printf("Matrix [%d][%d]: ", i, j);
                 matrix1[i][j] = sc.nextDouble();
             }
         }
+
+        int loop = 0, toMinus = 0, i = 0, j = 1, k = 2; 
+        
         if (baris1 == 3) {
-            int loop = 0, toMinus = 0, i = 0, j = 1, k = 2; 
             // DETERMINAN
             while (toMinus < 2) {
                 while (loop < baris1) {
@@ -294,8 +293,7 @@ public class MainMatrix {
                 loop = 0;
             }
             if (det == 0) {
-                System.out.println("Determinannya 0, matriks tidak mempunyai invers");
-                System.out.println();
+                System.out.println("Determinannya 0, tidak bisa melanjutkan");
                 return;
             }
 
@@ -313,8 +311,7 @@ public class MainMatrix {
                 if (c == 0) d--;
                 if (d == 2) c--;
             }
-            // INVERS 
-            System.out.println("Hasil invers: ");
+            // INVERS
             for (i = 0; i < baris1; i++) {
                 for (j = 0; j < baris1; j++) {
                     matrix2[i][j] *= ((1/det));
@@ -322,13 +319,11 @@ public class MainMatrix {
                 }
                 System.out.println();
             }
-            System.out.println();
-        } else {
+        } else if (baris1 == 2) {
             // DETERMINAN
             det = (matrix1[0][0] * matrix1[1][1]) - (matrix1[0][1] * matrix1[1][0]);
             if (det == 0) {
-                System.out.println("Determinannya 0, matrix tidak mempunyai invers");
-                System.out.println();
+                System.out.println("Determinannya 0, tidak bisa melanjutkan");
                 return;
             }
             // ADJ
@@ -337,15 +332,13 @@ public class MainMatrix {
             matrix2[1][0] = matrix1[1][0] * -1;
             matrix2[1][1] = matrix1[0][0];
             // INVERS
-            System.out.println("Hasil invers: ");
-            for (int i = 0; i < baris1; i++) {
-                for (int j = 0; j < baris1; j++) {
+            for (i = 0; i < baris1; i++) {
+                for (j = 0; j < baris1; j++) {
                     matrix2[i][j] *= (1/det);
                     System.out.print(matrix2[i][j] + " ");
                 }
                 System.out.println();
             }
-            System.out.println();
         }
     }
     
@@ -388,3 +381,4 @@ public class MainMatrix {
         }
     }
 }
+
