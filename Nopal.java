@@ -271,7 +271,7 @@ public class Nopal {
         }
         System.out.println();
 
-        int[][] transpose = new int[kolom1][baris1];
+        double[][] transpose = new double[kolom1][baris1];
         for (int i = 0; i < baris1; i++) {
             for (int j = 0; j < kolom1; j++) {
                 transpose[j][i] = matrix1[i][j];
