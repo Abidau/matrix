@@ -185,7 +185,7 @@ public class MainMatrix {
                 if (c == 0) d--;
                 if (d == 2) c--;
             }
-            // INVERS
+            // INVERS 
             System.out.println("Hasil invers: ");
             for (i = 0; i < baris1; i++) {
                 for (j = 0; j < baris1; j++) {
