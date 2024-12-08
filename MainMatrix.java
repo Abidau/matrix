@@ -64,7 +64,7 @@ public class MainMatrix {
         for (int i = 0; i < baris1; i++) { 
             for (int j = 0; j < kolom1; j++) { 
                 System.out.print("matrix 1 ["+ i +"]["+ j +"] : "); 
-                matrix1[i][j] = sc.nextInt(); //disimpan dalam matrix1[i][j]
+                matrix1[i][j] = sc.nextInt();
             }
         }
         System.out.println();
@@ -73,7 +73,7 @@ public class MainMatrix {
         for (int i = 0; i < baris2; i++) { 
             for (int j = 0; j < kolom2; j++) { 
                 System.out.print("matrix 2 [" + i + "][" + j + "] : "); 
-                matrix2[i][j] = sc.nextInt(); //disimpan dalam matrix2[i][j]
+                matrix2[i][j] = sc.nextInt(); 
             }
         } 
         System.out.println();
