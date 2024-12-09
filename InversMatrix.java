@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class InversMatrix {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         
         System.out.print("Masukkan ordo (2 atau 3): ");
         int ordo = sc.nextInt();
